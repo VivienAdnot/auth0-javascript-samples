@@ -62,6 +62,8 @@ window.addEventListener('load', function() {
 
   function handleAuthentication() {
     webAuth.parseHash(function(err, authResult) {
+      console.log('webAuth.parseHash authResult', authResult);
+
       if (authResult && authResult.accessToken && authResult.idToken) {
         window.location.hash = '';
         setSession(authResult);

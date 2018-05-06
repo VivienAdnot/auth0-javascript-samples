@@ -98,6 +98,9 @@ window.addEventListener('load', function() {
       }
 
       webAuth.client.userInfo(accessToken, function(err, profile) {
+
+        console.log('profile', profile);
+
         if (profile) {
           userProfile = profile;
           displayProfile();
